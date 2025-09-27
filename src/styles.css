@@ -1,0 +1,112 @@
+:root {
+  color-scheme: light;
+  --bs-body-font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  background-color: #f8f9fb;
+  color: #1b1f3b;
+}
+
+a {
+  color: inherit;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  color: #0d6efd;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card.shadow-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.shadow-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 1.5rem 3rem rgba(13, 110, 253, 0.18);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  left: 0.55rem;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(13, 110, 253, 0.2), rgba(102, 16, 242, 0.5));
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #0d6efd;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.15);
+}
+
+.badge-tag {
+  background: rgba(13, 110, 253, 0.12);
+  color: #0d6efd;
+  border: 1px solid rgba(13, 110, 253, 0.25);
+}
+
+footer {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.07), rgba(102, 16, 242, 0.1));
+}
+
+.hero {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.12), rgba(102, 16, 242, 0.12));
+}
+
+.hero-cta .btn {
+  min-width: 160px;
+}
+
+.navbar-blur {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 0.5rem 1.5rem rgba(15, 23, 42, 0.06);
+}
+
+@media (max-width: 767px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero .btn {
+    width: 100%;
+  }
+
+  .timeline::before {
+    left: 0.35rem;
+  }
+
+  .timeline-item::before {
+    left: -0.2rem;
+  }
+}
